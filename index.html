@@ -51,7 +51,9 @@
 <p style="color:white;">"What is live music?" Krzygrom 1/11/2021
   <button onclick="send11()">Send to discord.</button></p>
 <p style="color:white;">"nie sadze zebys tego potrzebowal" Krzygrom 2/9/2021
-  <button onclick="send11()">Send to discord.</button></p>
+  <button onclick="send12()">Send to discord.</button></p>
+<p style="color:white;">"?" Krzygrom 2/9/2021
+  <button onclick="send13()">Send to discord.</button></p>
  </body>
   
   <script>
@@ -67,6 +69,7 @@ var click9 = false
 var click10 = false
 var click11 = false
 var click12 = false
+var click13 = false
 
     function send1() {
 if(click1) {
@@ -291,7 +294,7 @@ click11 = true
     }
 	  
 function send12() {
-if(click11) {
+if(click12) {
 } else {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
@@ -306,6 +309,25 @@ if(click11) {
 
       request.send(JSON.stringify(params));
 click12 = true
+}
+    }
+	  
+function send13() {
+if(click13) {
+} else {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Krzygrom",
+        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        content: "?"
+      }
+
+      request.send(JSON.stringify(params));
+click13 = true
 }
     }
 	  
