@@ -58,6 +58,14 @@
   <button onclick="send14()">Send to discord.</button></p>
 <p style="color:white;">"idziesz urfa?" Krzygrom 2/20/2021
   <button onclick="send15()">Send to discord.</button></p>
+<p style="color:white;">"bo pewnie ciotka przyjdzie i cos tam mam zrobic wiec nie bede juz wchodzil" Krzygrom 2/20/2021
+  <button onclick="send16()">Send to discord.</button></p>
+<p style="color:white;">"nie mg" Krzygrom 2/20/2021
+<p style="color:white;">"XDDDDDDDDDDDD" Krzygrom 2/20/2021
+  <button onclick="send17()">Send to discord.</button></p>
+  <button onclick="send18()">Send to discord.</button></p>
+<p style="color:white;">"i grzeczniej" Krzygrom 2/20/2021
+  <button onclick="send19()">Send to discord.</button></p>
  </body>
   
   <script>
@@ -76,6 +84,11 @@ var click12 = false
 var click13 = false
 var click14 = false
 var click15 = false
+var click16 = false
+var click17 = false
+var click18 = false
+var click19 = false
+
 
     function send1() {
 if(click1) {
@@ -375,6 +388,84 @@ if(click15) {
 click15 = true
 }
     }	  
+function send16() {
+if(click16) {
+} else {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Krzygrom",
+        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        content: "bo pewnie ciotka przyjdzie i cos tam mam zrobic wiec nie bede juz wchodzil"
+      }
+
+      request.send(JSON.stringify(params));
+click16 = true
+}
+    }	  
+	  
+function send17() {
+if(click17) {
+} else {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Krzygrom",
+        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        content: "XDDDDDDDDDDDD"
+      }
+
+      request.send(JSON.stringify(params));
+click17 = true
+}
+    }	  
+
+function send18() {
+if(click18) {
+} else {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Krzygrom",
+        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        content: "nie mg"
+      }
+
+      request.send(JSON.stringify(params));
+click18 = true
+}
+    }	  
+	  
+	  
+function send19() {
+if(click19) {
+} else {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Krzygrom",
+        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        content: "i grzeczniej"
+      }
+
+      request.send(JSON.stringify(params));
+click19 = true
+}
+    }	  
+	  
+	  
   </script>
 </html>
   
