@@ -1,475 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Krzygromownia</title>
-   <link rel="icon" href="https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png">
-   <style>
-     body {
-     background-image: url('https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/back.png');
-     }
-   </style>
-<script type="text/javascript">
-			function disableButton(btn){
-				document.getElementById(btn.id).disabled = true;
-				alert("Button has been disabled.");
-			}
-		</script>
-  </head>
-<body oncontextmenu="return false;" onkeydown="return false;" onmousedown="return false;">
+<html>
+<meta charset="utf-8">
+<title>Dudownia</title>
+<link rel="icon" href="https://raw.githubusercontent.com/krzygrom/dudownia.github.io/main/image.png">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Strona główna - Dudownia">
+	<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  <h1 style="color:white;">Welcome to Krzygromownia</h1>
-  <p style="color:white;">The archive of Krzygrom's biggest achievements</p>
-  <h2 style="color:white;">Evolution of Krzygrom's discord profile picture:</h2>
-  <img src="https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/krzygrom.gif" alt="krzygrom classic" width="240" height="287">
-  <img src="https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/christmas%20krzygrom.gif" alt="krzygrom christmas" width="240" height="287">
-  <img src="https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/krzygrom%202077.gif" alt="krzygrom 2077" width="240" height="287">
-  <img src="https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png" alt="krzygrom 2077" width="240" height="287">
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+	  <style>
+     
+      ol {
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background-color:#FFF;
+        font-size:15px;
+        height:1em;
+        line-height:2em;
+        text-align:center;
+      }
+
+    
+      ol a {
+        display:block;
+        text-decoration:none;
+        color:#000;
+        padding:0 1px;
+      }
+
+   
+      ol > li {
+        float:left;
+        width:1920px;
+        margin-left:1px;
+        background-color:#FDD700;
+        height:2,5em;
+      }
+
+      ol > li:first-child {
+        margin-left:0;
+      }
+
+
+      ol > li:hover {
+        background-color:#EEE;
+      }
+
+
+      ol > li:hover > a {
+        color:#09C;
+      }
+
+      ol > li:hover > ul {
+        display:block;
+      }
+
+  
+      ol > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+      }
+
+      ol > li > ul > li {
+        position:relative;
+        background-color:#EEE;
+      }
+
+   
+      ol > li > ul > li > a {
+        border-top:1px solid #FFF;
+      }
+
+   
+      ol > li > ul > li:hover {
+        background-color:#DDD;
+      }
+
+ 
+      ol > li > ul > li:hover > a {
+        color:#09C;
+      }  
+    </style>	
+
+<ol>
+      <li>Menu
+      <ul>
+      <li><a href="index">Strona Główna</a>
+      <li><a href="historia">Historia</a>
+      <li><a href="onas">O nas</a>
+      <li><a href="galeria">Galeria Dudy</a></li>
+      <li><a href="salafejmu">Sala fejmu</a>
+        
+      </li>
+    </ol>
+   
+</head>
 	
-  <h2 style="color:white;">Krzygrom's best quotes:</h2>
-  <p style="color:white;">"jd jd jd jd jd jd jd jd jd jd jd jd jdjd jd jd jd jd jdjd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd" Krzygrom 12/22/2020
-  <button onclick="send1()">Send to discord.</button></p>
-  <p style="color:white;">"Nie denerwuj mnie" Krzygrom 12/22/2020
-  <button onclick="send2()">Send to discord.</button></p>
-  <p style="color:white;">"Ja tutaj chciałem tylko powiedziec do grupy 1 z plastyki ze w tym tygodniu by się przydało wsiąść za ta prace" Krzygrom 12/27/2020
-  <button onclick="send3()">Send to discord.</button></p>
-  <p style="color:white;">"Jakby miał downa?" Krzygrom 1/15/2021
-  <button onclick="send4()">Send to discord.</button></p>
-<p style="color:white;">"<img src="https://i.imgur.com/80Xezm6.png"alt="krzygrom 2077" width="30" height="30">" Krzygrom 1/18/2021
-  <button onclick="send5()">Send to discord.</button></p>
-<p style="color:white;">"mandok stulejo" Krzygrom 1/05/2021
-  <button onclick="send6()">Send to discord.</button></p>
-<p style="color:white;">"Co to kurna ma byc" Krzygrom 1/07/2021
-  <button onclick="send7()">Send to discord.</button></p>
-<p style="color:white;">"Ummm po świętach" Krzygrom 1/11/2021
-  <button onclick="send8()">Send to discord.</button></p>
-<p style="color:white;">"franco" Krzygrom 1/11/2021
-  <button onclick="send9()">Send to discord.</button></p>
-<p style="color:white;">"To jest plagiat" Krzygrom 1/11/2021
-  <button onclick="send10()">Send to discord.</button></p>
-<p style="color:white;">"What is live music?" Krzygrom 1/11/2021
-  <button onclick="send11()">Send to discord.</button></p>
-<p style="color:white;">"nie sadze zebys tego potrzebowal" Krzygrom 2/9/2021
-  <button onclick="send12()">Send to discord.</button></p>
-<p style="color:white;">"?" Krzygrom 2/9/2021
-  <button onclick="send13()">Send to discord.</button></p>
-<p style="color:white;">"gra ktos" Krzygrom 2/21/2021
-  <button onclick="send14()">Send to discord.</button></p>
-<p style="color:white;">"idziesz urfa?" Krzygrom 2/20/2021
-  <button onclick="send15()">Send to discord.</button></p>
-<p style="color:white;">"bo pewnie ciotka przyjdzie i cos tam mam zrobic wiec nie bede juz wchodzil" Krzygrom 2/20/2021
-  <button onclick="send16()">Send to discord.</button></p>
-<p style="color:white;">"nie mg" Krzygrom 2/20/2021
-  <button onclick="send17()">Send to discord.</button></p>
-<p style="color:white;">"XDDDDDDDDDDDD" Krzygrom 2/20/2021
-  
-  <button onclick="send18()">Send to discord.</button></p>
-<p style="color:white;">"i grzeczniej" Krzygrom 2/20/2021
-  <button onclick="send19()">Send to discord.</button></p>
- </body>
-  
-  <script>
-var click1 = false
-var click2 = false
-var click3 = false
-var click4 = false
-var click5 = false
-var click6 = false
-var click7 = false
-var click8 = false
-var click9 = false
-var click10 = false
-var click11 = false
-var click12 = false
-var click13 = false
-var click14 = false
-var click15 = false
-var click16 = false
-var click17 = false
-var click18 = false
-var click19 = false
+<body background="https://raw.githubusercontent.com/krzygrom/dudownia.github.io/main/2.png" width="240",height="287"
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+	
+	<center><div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h2>Duda</h2>
+    </div>
+    <div class="flip-box-back">
+      <h2>Juda</h2>
+    </div>
+  </div>
+</div>
+		
+<center><h1><p style="font-size:30px"><strong><mark>Duda to jedyny w swoim rodzaju czerwony, lewacki komuch</mark></font></h1></strong> 
+		
+<p style="font-size: 30px"><font color="yellow">Zadzwon do żudy <mark><a href="tel:609 771 177">609 771 177</a></font></p></mark>
+	
+<p style="font-size: 30px"><a href = "mailto: johanson.dudson69@10minute.xyz"><mark>Wysli email do judy</mark></a>
+	
+<p style="font-size: 30px">Przeczytaj<a href = "https://www.ce.uw.edu.pl/wp-content/uploads/2018/10/4.-kapitalizm_marks_engels_manifest-komunistyczny.pdf"> <mark>Manifest komunistyczny</a><mark>
+	
+<p><center> <img src="https://raw.githubusercontent.com/krzygrom/dudownia.github.io/main/jd3.png">
+	
+<p><center><input type="button" value="Poznaj prawdę" onclick="window.alert('Duda tak naprawde to dobry człowiek')">
+	
+<form id="form" onsubmit="return false;">
+  <p><label for="nick">Zostaw wiadomość dla dudy:</label><br>
+  <p><input type="text" id="userInput" onsubmit="window.alert('Wysłano, dziękujemy')"/>
+    <p><input type="submit" value="Prześlij" onclick="wiadomość()">
+	    
+	  <audio autoplay="">
+		<source src="muzyka.mp3" type="audio/mpeg">
+		</source>
+	</audio>
+<br/>
+<br/>
+<button type="submit" onclick="window.open('pocztowka.zip')">Pobierz pocztówkę z dudą</button>
 
 
-    function send1() {
-if(click1) {
-} else {
-      var request = new XMLHttpRequest();
+<script>
+function wiadomość() {
+    var input = document.getElementById("userInput").value;
+    discord();
+    alert(input);
+}
+function discord() {
+	
+var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
 
       request.setRequestHeader('Content-type', 'application/json');
 
       var params = {
         username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
+        avatar_url: "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z",
         content: "jd jd jd jd jd jd jd jd jd jd jd jd jdjd jd jd jd jd jdjd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd jd"
-
-      }
-
-      request.send(JSON.stringify(params));
-click1 = true
-}
-    }
-    
-    
-    
-    
-    function send2() {
-if(click2) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "Nie denerwuj mnie"
-
-      }
-
-      request.send(JSON.stringify(params));
-click2 = true
-}
-    }
-    
-    
-    
-    
-    
-    function send3() {
-if(click3) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "Ja tutaj chciałem tylko powiedziec do grupy 1 z plastyki ze w tym tygodniu by się przydało wsiąść za ta prace"
-
-      }
-
-      request.send(JSON.stringify(params));
-click3 = true
-}
-    }
-    
-    
-   function send4() {
-if(click4) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "Jakby miał downa?"
-
-      }
-
-      request.send(JSON.stringify(params));
-click4 = true
-}
-    }
-    
-    function send5() {
-if(click5) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "<:dudek3:805779679876481035>"
-      }
-
-      request.send(JSON.stringify(params));
-click5 = true
-}
-    }
-
-function send6() {
-if(click6) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "mandok stulejo"
-      }
-
-      request.send(JSON.stringify(params));
-click6 = true
-}
-    }
-
-function send7() {
-if(click7) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "Co to kurna ma byc"
-      }
-
-      request.send(JSON.stringify(params));
-click7 = true
-}
-    }
-
-
-function send8() {
-if(click8) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "Ummm po świętach"
-      }
-
-      request.send(JSON.stringify(params));
-click8 = true
-}
-    }
-
-function send9() {
-if(click9) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "franco"
-      }
-
-      request.send(JSON.stringify(params));
-click9 = true
-}
-    }
-
-function send10() {
-if(click10) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "To jest plagiat"
-      }
-
-      request.send(JSON.stringify(params));
-click10 = true
-}
-    }
-
-function send11() {
-if(click11) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "What is live music?"
-      }
-
-      request.send(JSON.stringify(params));
-click11 = true
-}
-    }
-	  
-function send12() {
-if(click12) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "nie sadze zebys tego potrzebowal"
-      }
-
-      request.send(JSON.stringify(params));
-click12 = true
-}
-    }
-	  
-function send13() {
-if(click13) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "?"
-      }
-
-      request.send(JSON.stringify(params));
-click13 = true
-}
-    }
-	  
-function send14() {
-if(click14) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "gra ktos"
-      }
-
-      request.send(JSON.stringify(params));
-click14 = true
-}
-    }
 	
-	  
-function send15() {
-if(click15) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "idziesz urfa?"
-      }
-
-      request.send(JSON.stringify(params));
-click15 = true
 }
-    }	  
-function send16() {
-if(click16) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "bo pewnie ciotka przyjdzie i cos tam mam zrobic wiec nie bede juz wchodzil"
-      }
-
-      request.send(JSON.stringify(params));
-click16 = true
-}
-    }	  
-	  
-function send17() {
-if(click17) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "XDDDDDDDDDDDD"
-      }
-
-      request.send(JSON.stringify(params));
-click17 = true
-}
-    }	  
-
-function send18() {
-if(click18) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "nie mg"
-      }
-
-      request.send(JSON.stringify(params));
-click18 = true
-}
-    }	  
-	  
-	  
-function send19() {
-if(click19) {
-} else {
-      var request = new XMLHttpRequest();
-      request.open("POST", "https://discord.com/api/webhooks/801756072444035083/UqGNBzSwOiJ0Si42WZM17Sfp9OERElVFPwgakhA8CzzTjSyd8bi-IFOBttJo-5qLvN9z");
-
-      request.setRequestHeader('Content-type', 'application/json');
-
-      var params = {
-        username: "Krzygrom",
-        avatar_url: "https://raw.githubusercontent.com/krzygrom/krzygrom.github.io/main/78415bd19959b563188fdd776c880ef9.png",
-        content: "i grzeczniej"
-      }
-
-      request.send(JSON.stringify(params));
-click19 = true
-}
-    }	  
-	  
-	  
-  </script>
-</html>
-  
-  
-  
+</script>
+</body>
 </html>
